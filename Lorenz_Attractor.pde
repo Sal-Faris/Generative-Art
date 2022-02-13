@@ -62,5 +62,5 @@ void draw(){
   
   endShape();
   
-  saveFrame("lorenzOutput2/lorenzAtt_####.png");
+  //saveFrame("lorenzOutput2/lorenzAtt_####.png");
 }  
