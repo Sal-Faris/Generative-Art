@@ -26,17 +26,17 @@ void draw(){
   
   points.add(new PVector(x, y, z)); // Adding the new point into the ArrayList
   
-  translate(0, 0, -80);
-  //rotateX(90);
-  //rotateY(-90);
-  //rotateZ(180);
+  translate(10, 120, -80);
+  rotateX(1.2611);
+  rotateY(6.2111);
+  rotateZ(1.9416);
   scale(5);
   stroke(255);
   strokeWeight(0.4);
   noFill();
   
   float hu = 0;
-  int count = 0;
+  //float count = 0;
   beginShape();
   for (PVector v : points){
     stroke(hu, 255, 200);
@@ -45,19 +45,22 @@ void draw(){
     // You need to plot it repeatedly because of the background(0); at start
     
     hu += 0.05;
-    count += 1;
     
-    rotateX((hu)/(hu*360));
-    println(count*((hu)/(hu*360)))
+    //rotateX((hu)/(hu*360));
+    //println(count*((hu)/(hu*360)));
     //rotateY((hu)/(hu*360));
-    //rotateZ((hu)/(hu*360));
+    rotateZ((hu)/(hu*360));
     
+    //count += 1;
+
     
     if(hu > 255){
       hu = 0;
     }
+    
   }
+  
   endShape();
   
-  //saveFrame("lorenzOutput2/lorenzAtt_####.png");
+  saveFrame("lorenzOutput2/lorenzAtt_####.png");
 }  
