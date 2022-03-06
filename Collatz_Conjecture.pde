@@ -21,32 +21,28 @@ void setup() {
     float len = 10;
     float angle = (PI)/(12);
    
-   resetMatrix();
-   translate(0, height/2);
+    resetMatrix();
+    translate(0, height/2);
    
-   for (int j = 0; j < sequence.size(); j++){
+    for (int j = 0; j < sequence.size(); j++){
    
-     int value = sequence.get(j);
+    int value = sequence.get(j);
      
-     if (value % 2 == 0) {
-       rotate(-angle);
-     } 
-     else {
-       rotate(angle);
-     }
+    if (value % 2 == 0) {
+      rotate(-angle);
+    } 
+    else {
+      rotate(angle);
+    }
      
-     stroke(255, 50);
-     line(0, 0, len, 0);
-     translate(len, 0);
-     
-     }
-     
-    // Visualize the list
+    stroke(255, 50);
+    line(0, 0, len, 0);
+    translate(len, 0);
     
-  }
-  
+     }
+   // Visualize the list
+   } 
   //saveFrame("CollatzOutput/collatz_PIby12.png");
-  
 }
 
 int collatz (int n){
